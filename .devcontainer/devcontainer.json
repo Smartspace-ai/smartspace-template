@@ -1,0 +1,30 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "SmartSpace",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".."
+	},
+	"workspaceFolder": "/workspace",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+	"remoteUser": "root",
+	"containerEnv": {
+		"PYTHONPATH": "/workspace"
+	},
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/local/bin/python"
+			},
+			"extensions": [
+				"charliermarsh.ruff",           // Fast Python linter and formatter
+				"ms-python.python",             // Core Python support
+				"ms-python.vscode-pylance",     // Advanced Python language features
+				"ms-python.debugpy"             // Python debugging support
+			]
+		}
+	}
+}
