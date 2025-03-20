@@ -1,0 +1,2 @@
+# smartspace-template
+SmartSpace Template
